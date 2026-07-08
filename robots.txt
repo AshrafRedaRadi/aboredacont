@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Allow style, javascript, and images crawling to pass mobile-friendliness and image searches
+Allow: /assets/
+Allow: /styles/
+Allow: /js/
+
+# Sitemap location (update with your actual domain after deployment)
+Sitemap: https://yourdomain.com/sitemap.xml
