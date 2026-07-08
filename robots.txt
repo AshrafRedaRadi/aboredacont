@@ -7,4 +7,4 @@ Allow: /styles/
 Allow: /js/
 
 # Sitemap location (update with your actual domain after deployment)
-Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://www.aboredacontracting.com/sitemap.xml

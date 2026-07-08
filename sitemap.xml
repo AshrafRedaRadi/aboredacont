@@ -6,65 +6,65 @@
   <!-- Update loc values with your actual domain name after hosting -->
 
   <url>
-    <loc>https://yourdomain.com/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/index.html"/>
+    <loc>https://www.aboredacontracting.com/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.aboredacontracting.com/index.html"/>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://yourdomain.com/about.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/about.html"/>
+    <loc>https://www.aboredacontracting.com/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.aboredacontracting.com/about.html"/>
     <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://yourdomain.com/services.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/services.html"/>
+    <loc>https://www.aboredacontracting.com/services.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.aboredacontracting.com/services.html"/>
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://yourdomain.com/assets/images/services/services-bg.webp</image:loc>
+      <image:loc>https://www.aboredacontracting.com/assets/images/services/services-bg.webp</image:loc>
       <image:title>مشروع بناء وتشييد في منطقة القصيم</image:title>
       <image:caption>أعمال المقاولات العامة والبناء والتشييد تحت إشراف أبو رضا للمقاولات</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://yourdomain.com/projects.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/projects.html"/>
+    <loc>https://www.aboredacontracting.com/projects.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.aboredacontracting.com/projects.html"/>
     <lastmod>2026-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://yourdomain.com/assets/images/home/main-1.webp</image:loc>
+      <image:loc>https://www.aboredacontracting.com/assets/images/home/main-1.webp</image:loc>
       <image:title>مشروع بناء فيلا سكنية</image:title>
       <image:caption>أعمال الهيكل الأسود والخرسانة لفيلا سكنية في بريدة</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yourdomain.com/assets/images/services/service-3.webp</image:loc>
+      <image:loc>https://www.aboredacontracting.com/assets/images/services/service-3.webp</image:loc>
       <image:title>تشطيب واجهة مبنى تجاري</image:title>
       <image:caption>تنفيذ تشطيبات واجهات حديثة ومميزة لمشاريع تجارية بالقصيم</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yourdomain.com/assets/images/about/about-representative.webp</image:loc>
+      <image:loc>https://www.aboredacontracting.com/assets/images/about/about-representative.webp</image:loc>
       <image:title>ترميم وتجديد منزل سكني</image:title>
       <image:caption>أعمال الترميم وإعادة الهيكلة الداخلية والخارجية للمنازل القديمة</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yourdomain.com/assets/images/services/project-4.webp</image:loc>
+      <image:loc>https://www.aboredacontracting.com/assets/images/services/project-4.webp</image:loc>
       <image:title>بناء عمائر سكنية وتجارية</image:title>
       <image:caption>إنشاء وتأسيس مباني متعددة الطوابق بأعلى معايير السلامة</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://yourdomain.com/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/contact.html"/>
+    <loc>https://www.aboredacontracting.com/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.aboredacontracting.com/contact.html"/>
     <lastmod>2026-07-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
