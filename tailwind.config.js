@@ -1,0 +1,80 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./*.html",
+    "./js/**/*.js"
+  ],
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface": "#f8f9fa",
+        "surface-white": "#FFFFFF",
+        "surface-variant": "#e1e3e4",
+        "surface-container": "#edeeef",
+        "surface-container-low": "#f3f4f5",
+        "surface-container-lowest": "#ffffff",
+        "surface-container-high": "#e7e8e9",
+        "on-surface": "#191c1d",
+        "on-surface-variant": "#44474d",
+        "on-background": "#191c1d",
+        "background": "#f8f9fa",
+        "outline": "#75777e",
+        "outline-variant": "#c5c6cd",
+        "primary": "#000000",
+        "on-primary": "#ffffff",
+        "primary-container": "#0d1c32",
+        "primary-fixed": "#d6e3ff",
+        "primary-fixed-dim": "#b9c7e4",
+        "secondary": "#775a19",
+        "on-secondary": "#ffffff",
+        "secondary-container": "#fed488",
+        "secondary-fixed": "#ffdea5",
+        "secondary-fixed-dim": "#e9c176",
+        "on-secondary-container": "#785a1a",
+        "deep-navy-dark": "#060D1A",
+        "on-tertiary-fixed": "#111c2c",
+        "accent-orange": "#E67E22",
+        "stone-gray-light": "#A0AEC0",
+        "inverse-surface": "#2e3132",
+        "inverse-on-surface": "#f0f1f2",
+        "on-primary-fixed": "#0d1c32",
+        "on-primary-fixed-variant": "#39475f",
+        "surface-tint": "#515f78",
+        "surface-dim": "#d9dadb",
+        "surface-bright": "#f8f9fa",
+      },
+      spacing: {
+        "section-gap": "80px",
+        "container-max": "1280px",
+        "margin-desktop": "48px",
+        "margin-mobile": "16px",
+        "gutter": "24px",
+      },
+      fontFamily: {
+        sans: ["IBM Plex Sans Arabic", "sans-serif"],
+      },
+      fontSize: {
+        "display-lg": ["48px", { lineHeight: "64px", fontWeight: "700" }],
+        "display-lg-mobile": ["32px", { lineHeight: "44px", fontWeight: "700" }],
+        "headline-xl": ["36px", { lineHeight: "52px", fontWeight: "600" }],
+        "headline-lg": ["28px", { lineHeight: "40px", fontWeight: "600" }],
+        "title-lg": ["22px", { lineHeight: "34px", fontWeight: "500" }],
+        "body-lg": ["18px", { lineHeight: "32px", fontWeight: "400" }],
+        "body-md": ["16px", { lineHeight: "28px", fontWeight: "400" }],
+        "label-md": ["14px", { lineHeight: "24px", fontWeight: "600" }],
+      },
+      borderRadius: {
+        DEFAULT: "0.25rem",
+        lg: "0.5rem",
+        xl: "0.75rem",
+        "2xl": "1rem",
+        full: "9999px",
+      },
+    }
+  },
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/container-queries')
+  ],
+}

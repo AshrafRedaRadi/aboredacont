@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   site.css — أبو رضا للمقاولات
+   Global styles, animation keyframes, and shared utilities.
+   Tailwind CDN handles the utility classes; this file handles
+   custom animation infrastructure and minor overrides.
+   ============================================================ */
+
+/* ── Google Font preconnect handled in HTML head ── */
+
+/* ── Custom Properties ───────────────────────────────────────── */
+:root {
+  --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out: cubic-bezier(0.0, 0.0, 0.2, 1.0);
+  --duration-reveal: 600ms;
+  --duration-fast: 200ms;
+  --duration-slider: 1000ms;
+
+  /* Design tokens matching DESIGN.md */
+  --color-deep-navy: #060D1A;
+  --color-accent-orange: #E67E22;
+  --color-gold: #C5A059;
+  --color-secondary: #775a19;
+}
+
+/* ── Base ────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.icon-fill {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* ── Scroll-Reveal Animation System ─────────────────────────── */
+/*
+ * PROGRESSIVE ENHANCEMENT GUARD:
+ * [data-animate] elements are VISIBLE by default — no hidden state.
+ * animations.js adds `js-ready` to <html> the moment it runs,
+ * which activates the animation system. This means:
+ *   - If JS fails (file://, blocked, slow) → content stays visible ✓
+ *   - If JS loads → smooth reveal animations activate ✓
+ */
+
+html.js-ready [data-animate] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity var(--duration-reveal) var(--ease-smooth),
+    transform var(--duration-reveal) var(--ease-smooth);
+}
+
+html.js-ready [data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays via data-delay attribute (set in HTML) */
+html.js-ready [data-animate][data-delay="100"] { transition-delay: 100ms; }
+html.js-ready [data-animate][data-delay="200"] { transition-delay: 200ms; }
+html.js-ready [data-animate][data-delay="300"] { transition-delay: 300ms; }
+html.js-ready [data-animate][data-delay="400"] { transition-delay: 400ms; }
+html.js-ready [data-animate][data-delay="500"] { transition-delay: 500ms; }
+html.js-ready [data-animate][data-delay="600"] { transition-delay: 600ms; }
+
+/* Fade-only variant (no translate, for images/overlays) */
+html.js-ready [data-animate="fade"] {
+  opacity: 0;
+  transform: none;
+  transition: opacity var(--duration-reveal) var(--ease-smooth);
+}
+html.js-ready [data-animate="fade"].is-visible {
+  opacity: 1;
+}
+
+/* ── Reduced Motion ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html.js-ready [data-animate],
+  html.js-ready [data-animate="fade"] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .slide {
+    transition: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ── Hero Slider ─────────────────────────────────────────────── */
+.slide {
+  transition: opacity var(--duration-slider) ease-in-out;
+}
+
+/* ── Navigation ──────────────────────────────────────────────── */
+/* Mobile nav revealed when body has class 'nav-open' */
+#mobile-nav {
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border-top-color: transparent !important;
+  transition: max-height 0.4s var(--ease-smooth), opacity 0.3s ease-out, visibility 0.4s, padding 0.4s, border-color 0.4s;
+}
+
+body.nav-open #mobile-nav {
+  max-height: 450px;
+  opacity: 1;
+  visibility: visible;
+  padding-top: 1rem !important; /* Tailwind py-4 equivalent */
+  padding-bottom: 1rem !important;
+  border-top-color: rgba(197, 198, 205, 0.2) !important;
+}
+
+/* ── Project Card Hover ──────────────────────────────────────── */
+.project-card {
+  transition:
+    box-shadow 300ms var(--ease-smooth),
+    transform 300ms var(--ease-smooth);
+}
+
+.project-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.project-card .card-img {
+  transition: transform 600ms var(--ease-smooth);
+}
+
+.project-card:hover .card-img {
+  transform: scale(1.06);
+}
+
+/* ── Service Card Hover ──────────────────────────────────────── */
+.service-card {
+  transition:
+    box-shadow 300ms var(--ease-smooth),
+    transform 300ms var(--ease-smooth);
+}
+
+.service-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+/* ── Floating Contact Buttons ────────────────────────────────── */
+.fab-btn {
+  transition: transform 300ms var(--ease-smooth), box-shadow 300ms var(--ease-smooth);
+}
+
+.fab-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.fab-btn:active {
+  transform: scale(0.95);
+}
+
+/* ── Utility ─────────────────────────────────────────────────── */
+/* Prevent scrollbar from hiding on horizontal-scroll filter row */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Gold accent underline for section headings */
+.heading-accent::after {
+  content: '';
+  display: block;
+  width: 3rem;
+  height: 3px;
+  background: var(--color-secondary);
+  border-radius: 9999px;
+  margin-top: 0.75rem;
+  margin-right: 0; /* RTL: starts from right naturally */
+}
+
+.heading-accent-center::after {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Selection color */
+::selection {
+  background-color: #fed488;
+  color: #785a1a;
+}
+
+/* Mobile Menu Button Animation */
+#mobile-menu-btn .menu-icon {
+  transition: transform 0.3s ease-in-out;
+}
+#mobile-menu-btn[aria-expanded="true"] .menu-icon {
+  transform: rotate(180deg);
+}
