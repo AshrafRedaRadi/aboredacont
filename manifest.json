@@ -1,0 +1,22 @@
+{
+  "name": "أبو رضا للمقاولات",
+  "short_name": "أبو رضا",
+  "description": "خدمات المقاولات العامة، البناء والتشييد، والترميم في بريدة والقصيم.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#f8f9fa",
+  "theme_color": "#060D1A",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/images/iconForContracting.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/iconForContracting.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
